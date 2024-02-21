@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Book</title>
+</head>
+<body onload = "todayDate()">
+    <header>
+        <img src="images/top.png" width="700px">
+    </header>
+   
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> | </li>
+            <li><a href="about.html">About</a> | </li>
+            <li><a href="book.html">Book</a> | </li>
+            <li><a href="tutorials.html">Tutorials</a> | </li>
+            <li><a href="rateus.html">Rate us </a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <form method="post" action="/submitted.html">
+                <div>
+                    <label for="name">• Name</label><br>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                </div>
+                <div>
+                    <label for="reservation_date">• Date:</label><br>
+                    <input type="date" id="reservation_date" name="reservation_date" required>
+                </div>
+                <br>
+                <div>
+                    <label for="time">• Appointment Time:</label><br>
+                    <select id="time" required onchange="validateOptions(this)">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="morning">Morning 10:00~13:00</option>
+                        <option value="afternoon">Afternoon 15:00~18:00</option>
+                    </select>
+                </div> 
+                <div>
+                    <p>• Services:</p>
+                    <input type="checkbox" id="hairappointment" name="services" value="hairappointment">
+                    <label for="hairappointment">Hair Appointment</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="manicure" name="services" value="manicure" />
+                    <label for="manicure">Manicure</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="makeup" name="services" value="makeup" />
+                    <label for="makeup">Make up</label>
+                </div><br>          
+                <div>
+                    <label for="email">• Enter your email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br><br>
+                  
+                </div>
+                <button type="submit" id="submitbutton">Submit</button><br>
+             
+            </form>
+        </div>
+        <script>
+          function validateOptions(select) {
+              if (select.value === "") {
+                  select.setCustomValidity("Please select an option");
+              } else {
+                  select.setCustomValidity("");
+              }
+          }
+      </script>
+    </main>
+   
+<script>
+    function todayDate(){
+    var d= new Date ();
+    var n= d.getFullYear() +"";
+    return document.getElementById("date").innerHTML=n;
+    }
+</script>
+<footer>
+    <div class="footerlogo">
+        <img src="images/small.png"> 
+    </div>
+    <div>
+        &copy;<em id="date"></em> &nbsp;Hair day
+    </div>
+</footer>
+</body>
+</html>

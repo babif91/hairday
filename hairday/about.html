@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>About</title>
+</head>
+<body onload = "todayDate()">
+    <header>
+        <img src="images/top.png" width="700px">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> | </li>
+            <li><a href="about.html">About</a> | </li>
+            <li><a href="book.html">Book</a> | </li>
+            <li><a href="tutorials.html">Tutorials</a> | </li>
+            <li><a href="rateus.html">Rate us </a></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <div id="ownerpicture"><img src="images/model.jpg" width="150px" height="150px"></div>
+            <h1>
+               Pria, the owner of Hair Day, earned her certificate as a colorist and immediately started specializing in edgy, custom coloring techniques. She wanted to create a "treat yourself" environment for her clients. Pria opened the salon with her good friend and talented hairdresser, Garry. They have a staff of seven: two stylists, three colorists, one manicurist and one make-up artist.
+            </h1>
+           </article>
+    </main>
+   
+    <script>
+        function todayDate(){
+        var d= new Date ();
+        var n= d.getFullYear() +"";
+        return document.getElementById("date").innerHTML=n;
+        }
+    </script>
+    <footer>
+        <div class="footerlogo">
+            <img src="images/small.png"> 
+        </div>
+        <div>
+            &copy;<em id="date"></em> &nbsp;Hair day
+        </div>
+    </footer>
+</body>
+</html>

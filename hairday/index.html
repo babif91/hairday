@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hair Day">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Hair Day</title>
+</head>
+<body onload = "todayDate()">
+    <header>
+        <img src="images/top.png" width="700px">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a> | </li>
+            <li><a href="about.html">About</a> | </li>
+            <li><a href="book.html">Book</a> | </li>
+            <li><a href="tutorials.html">Tutorials</a> | </li>
+            <li><a href="rateus.html">Rate us </a></li>
+        </ul>
+    </nav>
+    <main>
+
+   <!--promotion area-->
+            <article>
+             <div id="articlelogo"><img src="images/artboard.png"></div>
+             <h1>Welcome! Hair Day is a premier boutique hair salon nestled in the heart of Madison, Wisconsin, where cutting-edge style meets warm sophistication. Specializing in cut, color, and styling, we take pride in delivering personalized transformations that elevate your beauty to new heights. At Hair Day, we go beyond the ordinary, offering a range of services including makeup and nail treatments to enhance your overall look. Our salon boasts a welcoming and relaxing atmosphere, creating the perfect space for you to unwind and indulge in a pampering session like no other, we're not just a salon; we're your partners in beauty, dedicated to making each visit a memorable and transformative experience. Book your appointment today and discover the artistry that sets Hair Day apart!
+             </h1>
+            </article>
+
+<!--blog posts-->
+
+
+        <div class="container">
+            <div class="container1"> 
+                <h2><a href="tutorials/hairstyles.html" alt="hair model">Hair styles</a></h2>
+                <img src="images/woman-1439909_1920.jpg">
+                 <h3>Browse through our latest photos featuring chic and trendy hairstyles! From sleek updos to playful curls, discover the perfect styles for any occasion. Let your hair make a statement and effortlessly showcase your unique flair!</h3>
+              </div>
+
+          <div class="container2">
+             <h2><a href="tutorials/makeup.html" alt="make up artist">Make up tutorials</a></h2>
+             <img src="images/makeup-4139078_1280.jpg">
+              <h3>From everyday elegance to bold and glamorous looks, these tutorials are your guide to perfecting stunning makeup styles. Explore step-by-step instructions, tips, and tricks to enhance your beauty routine. </h3>
+            </div>
+       
+          <div class="container3">
+             <h2><a href="tutorials/nails.html" alt="manicure">Nails step-by-step!</a></h2>
+             <img src="images/pexels-karolina-grabowska-5237959.jpg">
+              <h3>Uncover step-by-step guides, tips, and creative ideas to elevate your nail game!</h3>
+           </div>  
+     </div>
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <script>
+        function todayDate(){
+        var d= new Date ();
+        var n= d.getFullYear() +"";
+        return document.getElementById("date").innerHTML=n;
+        }
+    </script>
+    <footer>
+        <div class="footerlogo">
+            <img src="images/small.png"> 
+        </div>
+        <div>
+            &copy;<em id="date"></em> &nbsp;Hair day
+        </div>
+    </footer>
+</body>
+</html>
